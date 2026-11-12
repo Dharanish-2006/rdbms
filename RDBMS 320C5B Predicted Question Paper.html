@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RDBMS 320C5B – Predicted Question Paper with Answers</title>
+<style>
+:root{--bg:#fff;--fg:#1d1d1f;--mut:#555;--ac:#1a56a0;--card:#f4f6fa;--bd:#d5dae3;--sv:#e6eefb;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15171b;--fg:#e8e8ea;--mut:#a5a9b2;--ac:#7db3ff;--card:#1f232a;--bd:#363c47;--sv:#26354f}}
+:root[data-theme="dark"]{--bg:#15171b;--fg:#e8e8ea;--mut:#a5a9b2;--ac:#7db3ff;--card:#1f232a;--bd:#363c47;--sv:#26354f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Georgia,"Times New Roman",serif}
+main{max-width:820px;margin:0 auto;padding:16px}
+header{text-align:center;border-bottom:3px double var(--bd);padding-bottom:10px}
+h1{font-size:1.4rem;margin:.2em 0}h2{background:var(--ac);color:var(--bg);padding:6px 12px;font-size:1.05rem;margin-top:2em}
+h3{font-size:1.05rem;margin:0 0 .4em;color:var(--ac)}h4{margin:.8em 0 .2em}
+.meta{display:flex;justify-content:space-between;flex-wrap:wrap;color:var(--mut);font-size:.9rem}
+.q{border:1px solid var(--bd);border-radius:8px;padding:12px 16px;margin:14px 0;background:var(--card);break-inside:avoid-page}
+.q10{min-height:80vh}.q5{min-height:35vh}
+.mk{float:right;font-size:.8rem;color:var(--mut)}
+.a{border-left:4px solid var(--ac);padding-left:12px;margin-top:8px}
+.a2{margin:2px 0 8px}
+pre{background:var(--bg);border:1px solid var(--bd);padding:8px;overflow-x:auto;font-size:.82rem;line-height:1.4;border-radius:6px}
+table{border-collapse:collapse;margin:6px 0;font-size:.88rem}td,th{border:1px solid var(--bd);padding:3px 9px}th{background:var(--sv)}
+.w{overflow-x:auto}
+svg{max-width:100%;height:auto;display:block;margin:8px auto}svg text{fill:var(--fg);font:12px sans-serif}
+svg .b{fill:var(--sv);stroke:var(--ac);stroke-width:1.5}svg .l{stroke:var(--ac);stroke-width:1.5;fill:none}
+button{float:right;background:var(--card);color:var(--fg);border:1px solid var(--bd);border-radius:6px;padding:4px 10px}
+@media print{button{display:none}.q10{page-break-before:always}.q{background:none}}
+</style></head><body><main>
+<header><button onclick="print()">Print</button>
+<h1>Relational Database Management System (320C5B)</h1>
+<div>Predicted Question Paper with Model Answers · B.C.A. Semester V · University of Madras</div>
+<div class="meta"><span>Time: Three hours</span><span>Maximum: 75 marks</span></div></header>
+
+<h2>PART A — (10 × 2 = 20 marks) · Answer any TEN</h2>
+<div class="q">
+<p><b>1. Define a weak entity.</b> An entity whose existence depends on another (owner) entity and which has no primary key of its own. Example: LOAN depends on CUSTOMER.</p>
+<p><b>2. Differentiate super key and candidate key.</b> A super key is any set of attributes that uniquely identifies a row (may have extra attributes). A candidate key is a minimal super key.</p>
+<p><b>3. What is referential integrity?</b> A foreign key value must either be NULL or match an existing primary key value in the referenced table, e.g. STUDENT.BRANCH_CODE must exist in BRANCH.</p>
+<p><b>4. Define QBE.</b> Query By Example is a graphical, form-based query language where the user fills example values in table skeletons instead of writing SQL; it is related to domain relational calculus.</p>
+<p><b>5. What is normalization?</b> The process of organizing tables into smaller related tables to reduce redundancy and remove insertion, deletion and update anomalies.</p>
+<p><b>6. Define a transaction.</b> A logical unit of work made of one or more operations (read, write) that moves the database from one consistent state to another.</p>
+<p><b>7. Write the difference between UNION and UNION ALL.</b> UNION removes duplicate rows from the combined result; UNION ALL keeps all duplicates.</p>
+<p><b>8. What is a natural join?</b> A join that automatically matches columns with the same name and data type in both tables and shows the common column once.</p>
+<p><b>9. Write the syntax of the CREATE TABLE command.</b> <code>CREATE TABLE Students (ID INT PRIMARY KEY, Name VARCHAR(50));</code></p>
+<p><b>10. What do ANY and ALL do?</b> <code>&gt; ANY</code> is true if the value exceeds at least one value of the subquery; <code>&gt; ALL</code> is true only if it exceeds every value.</p>
+<p><b>11. Define a PL/SQL procedure.</b> A named PL/SQL block stored in the database that performs a specific task; it may take IN, OUT and IN OUT parameters.</p>
+<p><b>12. What is an exception in PL/SQL?</b> A runtime error condition handled in the EXCEPTION section, e.g. NO_DATA_FOUND, ZERO_DIVIDE.</p>
+</div>
+
+<h2>PART B — (5 × 5 = 25 marks) · Answer any FIVE</h2>
+
+<div class="q q5"><span class="mk">5 marks</span><h3>13. Explain the 3-tier architecture of DBMS.</h3>
+<div class="a">
+<svg viewBox="0 0 560 90" width="560"><rect class="b" x="5" y="25" width="140" height="40" rx="6"/><text x="30" y="50">Client (UI)</text>
+<rect class="b" x="210" y="25" width="140" height="40" rx="6"/><text x="228" y="50">Application Server</text>
+<rect class="b" x="415" y="25" width="140" height="40" rx="6"/><text x="445" y="50">Database Server</text>
+<path class="l" d="M145 45H210M350 45H415"/></svg>
+<p>In 3-tier architecture an application server sits between client and database, so the client cannot talk to the database directly.</p>
+<ul><li><b>Presentation tier:</b> user interface running on the client (browser/app).</li>
+<li><b>Application (business) tier:</b> processes requests and business rules, and communicates with the database.</li>
+<li><b>Database tier:</b> stores data and does query processing and transaction management.</li></ul>
+<p>Used in large web applications; it gives better security, scalability and maintenance. In contrast, 1-tier lets the user work directly on the DBMS, and 2-tier lets client programs connect directly to the server through ODBC/JDBC.</p></div></div>
+
+<div class="q q5"><span class="mk">5 marks</span><h3>14. Explain the ISA relationship and its constraints.</h3>
+<div class="a">
+<p>Enhanced ER uses superclass/subclass relationships. ISA means “is a”: the lower-level entity (e.g. Hourly_Emps) is a subgroup of the higher-level entity (Employees) and <b>inherits all attributes and relationships</b> (ssn, name, lot).</p>
+<svg viewBox="0 0 400 120" width="360"><rect class="b" x="140" y="5" width="120" height="30"/><text x="175" y="25">Employees</text>
+<path class="l" d="M200 35V55M200 55L90 85M200 55L310 85"/><path class="b" d="M185 55h30l-15 -12z"/>
+<rect class="b" x="30" y="85" width="120" height="30"/><text x="50" y="105">Hourly_Emps</text>
+<rect class="b" x="250" y="85" width="120" height="30"/><text x="262" y="105">Contract_Emps</text></svg>
+<p><b>Constraints:</b></p>
+<ul><li><b>Disjoint:</b> an entity can belong to only one subclass (postgraduate or undergraduate).</li>
+<li><b>Overlap:</b> an entity may belong to several subclasses (Frog is both land and water animal).</li>
+<li><b>Total participation:</b> every superclass entity must be in at least one subclass (double line).</li>
+<li><b>Partial participation:</b> it may be in none (single line).</li></ul></div></div>
+
+<div class="q q5"><span class="mk">5 marks</span><h3>15. Explain the different types of keys.</h3>
+<div class="a"><p>Keys uniquely identify rows and link tables. Consider STUDENT(STUD_NO, SNAME, ADDRESS, PHONE).</p>
+<ul><li><b>Super key:</b> any attribute set that identifies a row, e.g. {STUD_NO, SNAME}.</li>
+<li><b>Candidate key:</b> minimal super key, e.g. STUD_NO.</li>
+<li><b>Primary key:</b> the candidate key chosen by the designer; unique and never NULL.</li>
+<li><b>Alternate key:</b> a candidate key not chosen as primary.</li>
+<li><b>Foreign key:</b> an attribute that refers to the primary key of another table (BRANCH_CODE in STUDENT).</li>
+<li><b>Composite key:</b> two or more columns together, e.g. {STUD_NO, COURSE_NO}.</li>
+<li><b>Unique key:</b> ensures distinct values but permits one NULL.</li></ul>
+<p>Keys ensure uniqueness, data integrity, relationships between tables and faster searching.</p></div></div>
+
+<div class="q q5"><span class="mk">5 marks</span><h3>16. Explain the basic relational algebra operations.</h3>
+<div class="a"><p>Relational algebra is a procedural query language; each operator takes relations and gives a relation.</p>
+<ul><li><b>Select (σ):</b> chooses tuples satisfying a predicate. σ<sub>BRANCH_NAME="Perryride"</sub>(LOAN) returns loans L-15 and L-16.</li>
+<li><b>Project (∏):</b> chooses columns. ∏<sub>NAME, CITY</sub>(CUSTOMER).</li>
+<li><b>Union (R ∪ S):</b> tuples in R or S, duplicates removed; both must have the same number of attributes.</li>
+<li><b>Intersection (R ∩ S):</b> tuples in both.</li>
+<li><b>Set difference (R − S):</b> tuples in R but not in S.</li>
+<li><b>Cartesian product (R × S):</b> every row of R combined with every row of S (3 × 3 rows gives 9 rows).</li>
+<li><b>Rename (ρ):</b> renames a relation, ρ(STUDENT1, STUDENT).</li>
+<li><b>Join (⋈):</b> combines related tuples on a condition; natural, equi and outer joins are variants.</li></ul></div></div>
+
+<div class="q q5"><span class="mk">5 marks</span><h3>17. Explain ACID properties of a transaction.</h3>
+<div class="a"><ul>
+<li><b>Atomicity:</b> all operations happen or none do. If the transfer of Rs 100 from A to B fails after debiting A, it is rolled back.</li>
+<li><b>Consistency:</b> integrity constraints hold before and after. A=600, B=300 (total 900); after transfer A=500, B=400, total still 900.</li>
+<li><b>Isolation:</b> a data item in use by one transaction cannot be used by another until it finishes; enforced by the concurrency control subsystem.</li>
+<li><b>Durability:</b> once committed, changes are permanent even after system failure; handled by the recovery subsystem.</li></ul>
+<svg viewBox="0 0 560 70" width="540"><rect class="b" x="2" y="20" width="80" height="30" rx="14"/><text x="22" y="40">Active</text>
+<rect class="b" x="108" y="20" width="110" height="30" rx="14"/><text x="116" y="40">Part. committed</text>
+<rect class="b" x="244" y="20" width="90" height="30" rx="14"/><text x="257" y="40">Committed</text>
+<rect class="b" x="360" y="20" width="70" height="30" rx="14"/><text x="375" y="40">Failed</text>
+<rect class="b" x="456" y="20" width="80" height="30" rx="14"/><text x="474" y="40">Aborted</text>
+<path class="l" d="M82 35H108M218 35H244M334 35H360M430 35H456"/></svg>
+<p>States: Active → Partially committed → Committed; on error → Failed → Aborted (rollback).</p></div></div>
+
+<div class="q q5"><span class="mk">5 marks</span><h3>18. Explain relational set operators with examples.</h3>
+<div class="a"><p>Set operators combine the results of two SELECT statements; both need the same number of columns with compatible types.</p>
+<div class="w"><table><tr><th colspan="2">Table A</th><th colspan="2">Table B</th></tr><tr><td>1</td><td>Alice</td><td>2</td><td>Bob</td></tr><tr><td>2</td><td>Bob</td><td>3</td><td>Charlie</td></tr></table></div>
+<pre>SELECT name FROM A UNION      SELECT name FROM B;  -- Alice, Bob, Charlie
+SELECT name FROM A UNION ALL  SELECT name FROM B;  -- Alice, Bob, Bob, Charlie
+SELECT name FROM A INTERSECT  SELECT name FROM B;  -- Bob
+SELECT name FROM A MINUS      SELECT name FROM B;  -- Alice  (EXCEPT in SQL Server/PostgreSQL)</pre>
+<p>MySQL lacks INTERSECT/MINUS in older versions; Oracle supports both.</p></div></div>
+
+<div class="q q5"><span class="mk">5 marks</span><h3>19. Explain cursors in PL/SQL with an example.</h3>
+<div class="a"><p>A cursor is a pointer to the result set of a query, used to process rows one by one. <b>Implicit</b> cursors are created automatically by Oracle for DML; <b>explicit</b> cursors are declared by the programmer (DECLARE, OPEN, FETCH, CLOSE). Attributes: %FOUND, %NOTFOUND, %ROWCOUNT, %ISOPEN.</p>
+<pre>DECLARE
+  CURSOR c_emp IS SELECT name, salary FROM employee;
+  v_name employee.name%TYPE;  v_sal employee.salary%TYPE;
+BEGIN
+  OPEN c_emp;
+  LOOP
+    FETCH c_emp INTO v_name, v_sal;
+    EXIT WHEN c_emp%NOTFOUND;
+    DBMS_OUTPUT.PUT_LINE(v_name || ' ' || v_sal);
+  END LOOP;
+  CLOSE c_emp;
+END;
+/</pre></div></div>
+
+<h2>PART C — (3 × 10 = 30 marks) · Answer any THREE</h2>
+
+<div class="q q10"><span class="mk">10 marks</span><h3>20. Explain the building blocks of the ER model and conversion of an ER diagram to tables. Mention its advantages.</h3>
+<div class="a">
+<p>The ER model (Peter Chen, 1976) is a high-level conceptual model showing data elements and their relationships as an ER diagram.</p>
+<h4>Building blocks</h4>
+<ul><li><b>Entity</b> (rectangle): object, person or place; strong (independent), weak (dependent, double rectangle) or associative.</li>
+<li><b>Attribute</b> (ellipse): property of an entity. Key (underlined), composite (made of parts, e.g. address), multivalued (double ellipse, e.g. phone numbers), derived (dashed, e.g. age from date of birth).</li>
+<li><b>Relationship</b> (diamond): association between entities; cardinality is 1:1, 1:N, N:1 or M:N; degree is unary, binary, ternary or N-ary.</li></ul>
+<svg viewBox="0 0 560 150" width="540"><rect class="b" x="20" y="55" width="100" height="36"/><text x="50" y="78">Student</text>
+<path class="b" d="M250 73l55 -30l55 30l-55 30z"/><text x="285" y="77">Enrolls</text>
+<rect class="b" x="440" y="55" width="100" height="36"/><text x="470" y="78">Course</text>
+<path class="l" d="M120 73H250M360 73H440"/><text x="150" y="66">M</text><text x="400" y="66">N</text>
+<ellipse class="b" cx="40" cy="15" rx="32" ry="13"/><text x="22" y="19" text-decoration="underline">Roll_No</text>
+<ellipse class="b" cx="110" cy="130" rx="30" ry="13"/><text x="92" y="134">Name</text>
+<ellipse class="b" cx="490" cy="15" rx="34" ry="13"/><text x="470" y="19" text-decoration="underline">Course_Id</text>
+<ellipse class="b" cx="490" cy="130" rx="34" ry="13"/><text x="468" y="134">Title</text>
+<path class="l" d="M60 27L70 55M95 118L85 91M480 28L490 55M490 117L490 91"/></svg>
+<h4>Reduction of ER diagram to tables</h4>
+<ol><li>Each entity type becomes a table; each single-valued attribute becomes a column.</li>
+<li>The key attribute becomes the primary key.</li>
+<li>Derived attributes are not stored.</li>
+<li>A multivalued attribute gets a separate table with the owner key, e.g. EMP_SKILL(Emp_ID, Skill).</li>
+<li>A composite attribute is represented by its simple components (Street, City, State, Zip).</li>
+<li>1:N relationship: put the primary key of the “1” side as a foreign key in the “N” table.</li>
+<li>M:N relationship: create a new table holding both primary keys.</li></ol>
+<pre>STUDENT(Roll_No PK, Name)      COURSE(Course_Id PK, Title)
+ENROLLS(Roll_No FK, Course_Id FK, PRIMARY KEY(Roll_No, Course_Id))</pre>
+<h4>Advantages</h4>
+<ul><li>Easily understood pictorial map for database design.</li><li>Represents real-world problems well.</li><li>Straightforward conversion to the relational model.</li>
+<li>Enhanced ER adds flexibility (ISA, aggregation).</li><li>Simple, easy-to-follow symbols.</li></ul></div></div>
+
+<div class="q q10"><span class="mk">10 marks</span><h3>21. Explain Codd’s rules.</h3>
+<div class="a">
+<p>Dr. E. F. Codd proposed in 1985 a set of rules (numbered 0 to 12, called Codd’s 12 rules) that a database must obey to be a true RDBMS.</p>
+<ol start="0"><li><b>Foundation rule:</b> the system must manage the database entirely through its relational capabilities.</li>
+<li><b>Information rule:</b> all information is stored as values in cells of tables (rows and columns).</li>
+<li><b>Guaranteed access rule:</b> every atomic value is reachable by table name, primary key value and column name.</li>
+<li><b>Systematic treatment of NULL:</b> NULL represents missing or inapplicable data, distinct from zero or blank; primary key cannot be NULL.</li>
+<li><b>Active online catalog:</b> the data dictionary is stored as tables and is queried with the same language.</li>
+<li><b>Comprehensive data sublanguage:</b> at least one language (SQL) supports data definition, views, manipulation, integrity constraints, authorization and transaction control.</li>
+<li><b>View updating rule:</b> all theoretically updatable views must be updatable by the system.</li>
+<li><b>High-level insert, update, delete:</b> operations work on sets of rows, and union, intersection and minus are supported.</li>
+<li><b>Physical data independence:</b> changes in storage or access methods do not affect applications.</li>
+<li><b>Logical data independence:</b> changes to table structure (splitting or joining tables) do not affect user views.</li>
+<li><b>Integrity independence:</b> integrity constraints are stored in the catalog, not in application programs.</li>
+<li><b>Distribution independence:</b> the data may be distributed over locations, yet users see it as one site.</li>
+<li><b>Non-subversion rule:</b> a low-level language cannot bypass the integrity rules expressed in the relational language.</li></ol>
+<table><tr><th>Concept</th><th>Meaning</th></tr>
+<tr><td>Domain</td><td>set of atomic values an attribute may take</td></tr>
+<tr><td>Key integrity</td><td>key is unique and not NULL</td></tr>
+<tr><td>Domain constraint</td><td>e.g. AGE &gt; 0</td></tr>
+<tr><td>Referential integrity</td><td>foreign key must match a primary key</td></tr></table>
+<p>Most commercial RDBMSs (Oracle, MySQL, SQL Server) follow these rules only partially; Codd’s rules serve as the benchmark for a “fully relational” system.</p></div></div>
+
+<div class="q q10"><span class="mk">10 marks</span><h3>22. Explain normalization with 1NF, 2NF, 3NF and BCNF.</h3>
+<div class="a">
+<p>Normalization organizes data into smaller linked tables to minimise redundancy and remove anomalies. <b>Insertion anomaly:</b> cannot insert data without other data. <b>Deletion anomaly:</b> deleting a row loses unrelated facts. <b>Update anomaly:</b> one change must be made in many rows, leading to inconsistency. Functional dependency X → Y means X (determinant) determines Y.</p>
+<h4>1NF – atomic values</h4>
+<p>No multivalued cells, no duplicate rows. EMPLOYEE(14, John, "7272826385, 9064738238") is split into one row per phone:</p>
+<table><tr><th>EMP_ID</th><th>EMP_NAME</th><th>EMP_PHONE</th></tr><tr><td>14</td><td>John</td><td>7272826385</td></tr><tr><td>14</td><td>John</td><td>9064738238</td></tr></table>
+<h4>2NF – no partial dependency</h4>
+<p>1NF + every non-key attribute depends on the whole key. TEACHER(TEACHER_ID, SUBJECT, TEACHER_AGE) has key {TEACHER_ID, SUBJECT} but TEACHER_ID → TEACHER_AGE is partial. Decompose:</p>
+<pre>TEACHER_DETAIL(TEACHER_ID, TEACHER_AGE)    TEACHER_SUBJECT(TEACHER_ID, SUBJECT)</pre>
+<h4>3NF – no transitive dependency</h4>
+<p>2NF + for every non-trivial FD X → Y, X is a super key or Y is a prime attribute. In STUDENT(enrol_no, name, dept, building_no): enrol_no → dept and dept → building_no, so enrol_no → building_no is transitive. Decompose:</p>
+<pre>STUDENT(enrol_no, name, dept)       DEPARTMENT(dept, building_no)</pre>
+<h4>BCNF – every determinant is a super key</h4>
+<p>EMPLOYEE(EMP_ID, EMP_COUNTRY, EMP_DEPT, DEPT_TYPE, EMP_DEPT_NO) with FDs EMP_ID → EMP_COUNTRY and EMP_DEPT → {DEPT_TYPE, EMP_DEPT_NO}; candidate key {EMP_ID, EMP_DEPT}. Neither determinant is a key, so decompose:</p>
+<pre>EMP_COUNTRY(EMP_ID, EMP_COUNTRY)
+EMP_DEPT(EMP_DEPT, DEPT_TYPE, EMP_DEPT_NO)
+EMP_DEPT_MAPPING(EMP_ID, EMP_DEPT)</pre>
+<p>Now the left side of every FD is a key, so each table is in BCNF.</p>
+<svg viewBox="0 0 560 50" width="540"><rect class="b" x="2" y="10" width="90" height="30" rx="5"/><text x="18" y="30">Unnormalized</text>
+<rect class="b" x="125" y="10" width="60" height="30" rx="5"/><text x="144" y="30">1NF</text>
+<rect class="b" x="220" y="10" width="60" height="30" rx="5"/><text x="239" y="30">2NF</text>
+<rect class="b" x="315" y="10" width="60" height="30" rx="5"/><text x="334" y="30">3NF</text>
+<rect class="b" x="410" y="10" width="70" height="30" rx="5"/><text x="428" y="30">BCNF</text>
+<path class="l" d="M92 25H125M185 25H220M280 25H315M375 25H410"/></svg>
+<p><b>Advantages:</b> less redundancy, consistency, flexible design. <b>Disadvantages:</b> more joins and possibly slower queries, careless decomposition can harm design.</p></div></div>
+
+<div class="q q10"><span class="mk">10 marks</span><h3>23. Explain SQL joins (inner, outer, cross, natural, USING, ON) with examples.</h3>
+<div class="a">
+<p>A join combines rows of two or more tables based on a related column.</p>
+<div class="w"><table><tr><th colspan="2">Students</th><th colspan="2">Marks</th></tr><tr><td>1</td><td>Ram</td><td>1</td><td>85</td></tr><tr><td>2</td><td>Sita</td><td>2</td><td>90</td></tr><tr><td>3</td><td>Ravi</td><td>4</td><td>70</td></tr></table></div>
+<h4>1. INNER JOIN / JOIN ON</h4>
+<pre>SELECT * FROM Students s INNER JOIN Marks m ON s.ID = m.ID;</pre>
+<p>Only matching rows: Ram 85, Sita 90. Ravi and ID 4 are excluded. ON allows different column names and any condition.</p>
+<h4>2. LEFT OUTER JOIN</h4>
+<pre>SELECT * FROM Students LEFT OUTER JOIN Marks ON Students.ID = Marks.ID;</pre>
+<p>All students; Ravi appears with Score NULL.</p>
+<h4>3. RIGHT OUTER JOIN</h4>
+<p>All rows from Marks; the mark for ID 4 appears with Name NULL.</p>
+<h4>4. FULL OUTER JOIN</h4>
+<p>All rows from both tables, NULL where no match: Ram, Sita, Ravi (NULL) and ID 4 (NULL name).</p>
+<svg viewBox="0 0 520 90" width="500"><circle class="b" cx="60" cy="45" r="32" fill-opacity=".6"/><circle class="b" cx="100" cy="45" r="32" fill-opacity=".6"/><text x="55" y="86">INNER</text>
+<circle class="b" cx="230" cy="45" r="32"/><circle class="l" cx="270" cy="45" r="32"/><text x="235" y="86">LEFT</text>
+<circle class="l" cx="400" cy="45" r="32"/><circle class="b" cx="440" cy="45" r="32"/><text x="395" y="86">RIGHT</text></svg>
+<h4>5. CROSS JOIN</h4>
+<pre>SELECT * FROM A CROSS JOIN B;</pre>
+<p>Cartesian product: 2 rows × 2 rows gives 4 rows (Ram-HR, Ram-IT, Sita-HR, Sita-IT). No condition is used.</p>
+<h4>6. NATURAL JOIN</h4>
+<pre>SELECT * FROM A NATURAL JOIN B;</pre>
+<p>Joins automatically on all same-named columns, which appear once in the output.</p>
+<h4>7. JOIN USING</h4>
+<pre>SELECT name, dept_name FROM employees JOIN departments USING (dept_id);</pre>
+<p>Used when the column has the same name in both tables; no table prefix is allowed on that column afterwards. Result: Alice HR, Bob Marketing.</p>
+<h4>8. SELF JOIN</h4>
+<pre>SELECT A.Name, B.Name FROM Employees A, Employees B WHERE A.ManagerID = B.EmpID;</pre>
+<p>A table joined with itself. Equi join uses “=”, non-equi join uses &gt;, &lt;, !=.</p></div></div>
+
+<div class="q q10"><span class="mk">10 marks</span><h3>24. Explain PL/SQL: block structure, control structures, exception handling, procedures, functions and triggers.</h3>
+<div class="a">
+<p>PL/SQL is Oracle’s procedural extension of SQL combining SQL with variables, conditions, loops and error handling.</p>
+<h4>Block structure</h4>
+<pre>DECLARE   -- optional: variables, constants, cursors
+BEGIN     -- mandatory: executable statements
+EXCEPTION -- optional: error handling
+END;
+/</pre>
+<h4>Control structures</h4>
+<pre>IF marks &gt;= 90 THEN grade := 'A';          -- conditional
+ELSIF marks &gt;= 75 THEN grade := 'B';
+ELSE grade := 'C'; END IF;
+
+FOR i IN 1..5 LOOP DBMS_OUTPUT.PUT_LINE(i); END LOOP;   -- iterative
+WHILE counter &lt;= 5 LOOP counter := counter + 1; END LOOP;</pre>
+<p>Three kinds: conditional (IF, CASE), iterative (LOOP, WHILE, FOR with EXIT, CONTINUE) and sequential (default order, GOTO, NULL).</p>
+<h4>Exception handling</h4>
+<pre>BEGIN
+  SELECT salary INTO v_salary FROM employee WHERE emp_id = 100;
+EXCEPTION
+  WHEN NO_DATA_FOUND THEN DBMS_OUTPUT.PUT_LINE('Employee not found');
+  WHEN TOO_MANY_ROWS THEN DBMS_OUTPUT.PUT_LINE('More than one employee');
+  WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('Error occurred');
+END;</pre>
+<p>User-defined exceptions are declared (<code>e_age EXCEPTION;</code>) and raised with RAISE.</p>
+<h4>Procedure and function</h4>
+<pre>CREATE OR REPLACE PROCEDURE show_salary(p_salary NUMBER) IS
+BEGIN DBMS_OUTPUT.PUT_LINE('Salary = ' || p_salary); END;
+/
+CREATE OR REPLACE FUNCTION square_num(n NUMBER) RETURN NUMBER IS
+BEGIN RETURN n * n; END;
+/</pre>
+<p>A procedure performs an action and is called as a statement; a function must return a value and can be used in expressions. Parameter modes: IN, OUT, IN OUT.</p>
+<h4>Trigger</h4>
+<p>A stored program that fires automatically on INSERT, UPDATE or DELETE. Timing: BEFORE, AFTER, INSTEAD OF; level: statement or row (FOR EACH ROW, using :OLD and :NEW).</p>
+<pre>CREATE OR REPLACE TRIGGER salary_check
+BEFORE UPDATE OF salary ON employee FOR EACH ROW
+BEGIN
+  IF :NEW.salary &lt; :OLD.salary THEN
+    RAISE_APPLICATION_ERROR(-20001, 'Salary cannot be reduced');
+  END IF;
+END;
+/</pre>
+<p>Packages group related procedures, functions and variables in a specification and a body, giving modularity and reuse.</p></div></div>
+
+<p style="text-align:center;color:var(--mut)">— End of paper —</p>
+</main></body></html>
